@@ -12,5 +12,5 @@ jobs:
       - name: running index.html files
         run: docker bulid -t devopsimage .
       - name: running  docker container
-        run: docker run -d -name devopscontainer -p  8049:80 devopsimage
+        run: docker run -d --name devopscontainer -p  8049:80 devopsimage
      
