@@ -13,4 +13,15 @@ jobs:
         run: docker build -t devopsimage .
       - name: running  docker container
         run: docker run -d --name devopscontainer -p 8049:80 devopsimage
+      - name: Docker login
+        uses: docker/login-action@v2
+        with:
+          username: ${{secrets.DOCKER_NAME}}
+          password: ${{secrets.DOCKER_PASSWORD}}
+      - name: pushed images to Docker hub
+       run: 
+         docker tag devopsimage baranigopal/devopscontainer:v6
+         docker push baranigopal/devopscontainer:v6
+          
+          
      
