@@ -44,5 +44,10 @@ jobs:
 
       - name: pushed images to Docker hub
         run: |
-          docker tag devopsimage baranigopal/devopscontainer:v1
-          docker push baranigopal/devopscontainer:v1
+
+         docker tag devopsimage baranigopal/devopscontainer:v9
+         docker push baranigopal/devopscontainer:v9
+          
+          
+     
+
